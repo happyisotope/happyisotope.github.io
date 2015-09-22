@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<!--[if lte IE 8 ]>
+<html class="ie" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<!--
+***************  *      *     *
+      8          *    *       *
+      8          *  *         *
+      8          **           *
+      8          *  *         *
+      8          *    *       *
+      8          *      *     *
+      8          *        *   ***********    -----Theme By Kieran(http://go.kieran.top)
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
+<!--<![endif]-->
+
+<head>
+  <title>Jason聊Bootstrap：第一话 | Happy Isotope</title>
+  <!-- Meta data -->
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Happy Isotope">
+    <meta name="author" content="Jason Zhuo Jia">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+
+    <!-- Favicon, (keep icon in root folder) -->
+    <link rel="Shortcut Icon" href="/img/favicon.ico" type="image/ico">
+
+    <link rel="alternate" href="/atom.xml" title="Happy Isotope" type="application/atom+xml">
+    <link rel="stylesheet" href="/css/all.css" media="screen" type="text/css">
+	
+    <link rel="stylesheet" href="/highlightjs/vs.css" type="text/css">
+    
+    
+
+    <!-- Custom stylesheet, (add custom styles here, always load last) -->
+    <!-- Load our stylesheet for IE8 -->
+    <!--[if IE 8]>
+    <link rel="stylesheet" type="text/css" href="/css/ie8.css" />
+    <![endif]-->
+
+    <!-- Google Webfonts (Monserrat 400/700, Open Sans 400/600) -->
+    <link href='//fonts.useso.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+
+    <!-- Load our fonts individually if IE8+, to avoid faux bold & italic rendering -->
+    <!--[if IE]>
+    <link href='http://fonts.useso.com/css?family=Montserrat:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.useso.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
+    <![endif]-->
+
+    <!-- jQuery | Load our jQuery, with an alternative source fallback to a local version if request is unavailable -->
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script>window.jQuery || document.write('<script src="js/jquery-1.11.1.min.js"><\/script>')</script>
+
+    <!-- Load these in the <head> for quicker IE8+ load times -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.min.js"></script>
+    <script src="/js/respond.min.js"></script>
+    <![endif]-->
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  <style>.col-md-8.col-md-offset-2.opening-statement img{display:none;}</style>
+</head>
+
+<!--
+<body class="post-template">
+-->
+<body id="index" class="lightnav animsition">
+
+      <!-- ============================ Off-canvas navigation =========================== -->
+
+    <div class="sb-slidebar sb-right sb-style-overlay sb-momentum-scrolling">
+        <div class="sb-close" aria-label="Close Menu" aria-hidden="true">
+            <img src="/img/close.png" alt="Close"/>
+        </div>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu">
+            <li><a href="/" class="animsition-link" title="Home">Home</a></li>
+            <li><a href="/archives" class="animsition-link" title="archive">archives</a></li>
+            <!-- Dropdown Menu -->
+			 
+            <li>
+                <a class="sb-toggle-submenu">Works<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                        <li><a href="/" target="_BLANK" class="animsition-link">AAA</a></li>
+                    
+                        <li><a href="/atom.xml" target="_BLANK" class="animsition-link">BBB</a></li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sb-toggle-submenu">Links<span class="sb-caret"></span></a>
+                <ul class="sb-submenu">
+                    
+                    <li><a href="http://go.kieran.top/" class="animsition-link">Kieran</a></li>
+                    
+                    <li><a href="http://domain.com/" class="animsition-link">Name</a></li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+        <!-- Lists in Slidebars -->
+        <ul class="sb-menu secondary">
+            <li><a href="/about.html" class="animsition-link" title="about">About</a></li>
+            <li><a href="/atom.xml" class="animsition-link" title="rss">RSS</a></li>
+        </ul>
+    </div>
+    
+    <!-- ============================ END Off-canvas navigation =========================== -->
+
+    <!-- ============================ #sb-site Main Page Wrapper =========================== -->
+
+    <div id="sb-site">
+        <!-- #sb-site - All page content should be contained within this id, except the off-canvas navigation itself -->
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <div id="navigation" class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <!-- Nav logo -->
+                    <div class="logo">
+                        <a href="/" title="Logo" class="animsition-link">
+                         <img src="/img/logo.png" alt="Logo" width="35px;"/> 
+                        </a>
+                    </div>
+                    <!-- // Nav logo -->
+                    <!-- Info-bar -->
+                    <nav>
+                        <ul class="nav">
+                            <li><a href="/" class="animsition-link">Happy Isotope</a></li>
+                            <li class="nolink"><span>Always </span>Creative.</li>
+                            
+                            <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a></li>
+                            
+                            
+                            <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a></li>
+                            
+                            
+                            <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a></li>
+                            
+                            
+                            <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a></li>
+                            
+                            
+                            <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a></li>
+                            
+                            <li class="nolink"><span>Welcome!</span></li>
+                        </ul>
+                    </nav>
+                    <!--// Info-bar -->
+                </div>
+                <!-- // .container -->
+                <div class="learnmore sb-toggle-right">More</div>
+                <button type="button" class="navbar-toggle menu-icon sb-toggle-right" title="More">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar before"></span>
+                <span class="icon-bar main"></span>
+                <span class="icon-bar after"></span>
+                </button>
+            </div>
+            <!-- // .navbar-inner -->
+        </div>
+
+        <!-- ============================ Header & Logo bar =========================== -->
+
+        <!-- ============================ Hero Image =========================== -->
+
+        <section id="hero" class="scrollme">
+            <div class="container-fluid element-img" style="background: url(/img/1.jpg) no-repeat center center fixed;background-size: cover">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2 vertical-align cover boost text-center">
+                        <div class="center-me animateme" data-when="exit" data-from="0" data-to="0.6" data-opacity="0" data-translatey="100">
+                            <div>
+                            	
+                                <h2>YOU'VE MADE A <span>BRAVE</span> DECISION, WELCOME.</h2>
+                                <p></p>
+				    			
+                                <h2></h2>
+                                <p>每一个不曾起舞的日子都是对生命的辜负。</p>
+				    			
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- // .col-md-12 -->
+                </div>
+                <div class="herofade beige-dk"></div>
+            </div>
+        </section>
+
+        <!-- Height spacing helper -->
+        <div class="heightblock"></div>
+        <!-- // End height spacing helper -->
+
+        <!-- ============================ END Hero Image =========================== -->
+      
+<section id="intro">
+    <div class="container">
+        <div class="row col-md-offset-2">
+            <div class="col-md-8">
+    			<span class="post-meta">
+      <time datetime="2015-07-11T18:38:16.000Z" itemprop="datePublished">
+          2015-07-11
+      </time>
+    
+    
+    | 
+    <a href='/tags/Front-End/'>Front End</a>
+    
+    
+</span>
+                <h1>Jason聊Bootstrap：第一话</h1>
+            </div>
+        </div>
+        <div class="col-md-8 col-md-offset-2">
+      		<p>Bootstrap是Twitter的一个孩子。按照它官方的说法，Bootstrap是一个简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。我觉得Bootstrap流行最好的体现就是，很多网站，尤其是硅谷那些Startup公司的网站，大多采用了Bootstrap的框架进行前端的快速开发，使其看起来简约但不简单。尽管很多优秀的前端设计师已经开始公开抱怨，Bootstrap会溟灭一个公司网站的创意和设计感，使整个IT行业网站千篇一律，但是我觉得Bootstrap是一个非常值得初学者学习的前端综合框架。</p>
+<p><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150727-2.jpg" alt=""></p>
+<p>目前，Bootstrap已经出到了3.3版本了，想初步了解更多信息，有个更加直观的认识，在国内可以访问其中文的官方地址为：<a href="http://v3.bootcss.com。" target="_blank" rel="external">http://v3.bootcss.com。</a></p>
+<p>本文是Jason聊Bootstrap的第一话，旨在告诉大家Bootstrap最基本用法和一些常见的组件的使用。<br><a id="more"></a></p>
+<p>###下载和引用<br>在下载部分，可以根据自己的需要下载三种版本的Bootstrap：</p>
+<ul>
+<li>用于生产环境的 Bootstrap，编译并压缩后的 CSS、JavaScript 和字体文件。不包含文档和源码文件。</li>
+<li>Bootstrap 源码，Less、JavaScript 和 字体文件的源码，并且带有文档。需要 Less 编译器和一些设置工作。使用起来比上一个稍微麻烦一些。</li>
+<li>Sass，这是 Bootstrap 从 Less 到 Sass 的源码移植项目，用于快速地在 Rails、Compass 或 只针对 Sass 的项目中引入。</li>
+</ul>
+<p>如果你下载的是第一个版本，解开压缩包之后，文件大小有1.1MB左右，目录结构就是这样的：</p>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">bootstrap/</span><br><span class="line">├── css/</span><br><span class="line">│   ├── bootstrap<span class="class">.css</span></span><br><span class="line">│   ├── bootstrap<span class="class">.css</span><span class="class">.map</span></span><br><span class="line">│   ├── bootstrap<span class="class">.min</span><span class="class">.css</span></span><br><span class="line">│   ├── bootstrap-theme<span class="class">.css</span></span><br><span class="line">│   ├── bootstrap-theme<span class="class">.css</span><span class="class">.map</span></span><br><span class="line">│   └── bootstrap-theme<span class="class">.min</span><span class="class">.css</span></span><br><span class="line">├── js/</span><br><span class="line">│   ├── bootstrap<span class="class">.js</span></span><br><span class="line">│   └── bootstrap<span class="class">.min</span><span class="class">.js</span></span><br><span class="line">└── fonts/</span><br><span class="line">    ├── glyphicons-halflings-regular<span class="class">.eot</span></span><br><span class="line">    ├── glyphicons-halflings-regular<span class="class">.svg</span></span><br><span class="line">    ├── glyphicons-halflings-regular<span class="class">.ttf</span></span><br><span class="line">    ├── glyphicons-halflings-regular<span class="class">.woff</span></span><br><span class="line">    └── glyphicons-halflings-regular.woff2</span><br></pre></td></tr></table></figure> 
+<p>凡是带min的都是压缩版本。</p>
+<p>同时，Bootstrap官方基于国内云厂商的CDN，提供了一个免费的CDN加速服务，使得在国内加速效果更加明显。</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- 新 Bootstrap 核心 CSS 文件 --&gt;</span></span><br><span class="line">   <span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 可选的Bootstrap主题文件（一般不用引入） --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css"</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- jQuery文件。务必在bootstrap.min.js 之前引入 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 最新的 Bootstrap 核心 JavaScript 文件 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">script</span> <span class="attribute">src</span>=<span class="value">"//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="title">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当然，你要是个Git捍卫者和爱好者，你也可以去Github上面去Clone源码下来。</p>
+<p>注意，Bootstrap的JS效果是基于jQuery，所以引用的时候应当先引入jQuery，再引入Bootstrap。</p>
+<p>##第一个Bootstrap Demo：基本导航栏</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">name</span>=<span class="value">"viewpoint"</span> <span class="attribute">content</span>=<span class="value">"width=device-width, initial-scale=1"</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">title</span>&gt;</span>Bootstrap Demo 01<span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"bootstrap.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"navbar navbar-default"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span></span><br><span class="line">      		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">          	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span></span><br><span class="line">             		<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"navbar-brand"</span>&gt;</span> Jason <span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="title">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>通过meta标签定义一下屏幕宽度，设初始比例为1，即自适应时不放缩。通过link引入一个css样式。通过nav标签来看看一个默认default的标签样式，加一个标志一样的东西，这里随便写一个Jason吧。通过查看效果，如图：<br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150709-1.jpg" alt=""><br>很简约的森女风格有木有！当然，这里可以修改navbar的样式为别的，比如修改navbar-default为navbar-inverse,这时就会将导航的灰色背景改为黑色背景，极客风格有木有！</p>
+<p>我们接下来继续添加导航栏的代码，我们添加三个具体项目到导航栏，分别是Home,Story, AboutMe，并对Home栏设为默认选中Active。因为导航栏的每一项都是可以选中的，所以我们一般都添加一个a标签进行连接。为了简化，我就只展示body里面的部分了，HTML代码和效果如下：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">nav</span> <span class="attribute">class</span>=<span class="value">"navbar navbar-inverse"</span> <span class="attribute">role</span>=<span class="value">"navigation"</span>&gt;</span></span><br><span class="line">      		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">          	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"navbar-header"</span>&gt;</span></span><br><span class="line">              	<span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">class</span>=<span class="value">"navbar-brand"</span>&gt;</span> Jason <span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"collapse navbar-collapse"</span>&gt;</span></span><br><span class="line">              	<span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav navbar-nav"</span>&gt;</span></span><br><span class="line">                 	<span class="tag">&lt;<span class="title">li</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Home<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">                		<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Story<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">                		<span class="tag">&lt;<span class="title">li</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>AboutMe<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">               	<span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="title">nav</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150709-3.jpg" alt=""></p>
+<p>最后，我们可以继续完善，使其更具一般形态。通过一个container，添加一个正文的文本,并调整合适的padding。HMTL和代码效果如下：<br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150709-4.jpg" alt=""></p>
+<p>##Bootstrap:简单的表单</p>
+<p>单独的表单控件会被自动赋予一些全局样式。所有设置了.form-control 类的 input、textarea 和 select 元素都将被默认设置宽度属性为 width: 100%;。 将 label 元素和前面提到的控件包裹在 .form-group 中可以获得最好的排列。</p>
+<p>基本样式示例：<br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150724-1.jpg" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="doctype">&lt;!DOCTYPE html&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">head</span> <span class="attribute">lang</span>=<span class="value">"en"</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">meta</span> <span class="attribute">charset</span>=<span class="value">"UTF-8"</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">title</span>&gt;</span><span class="tag">&lt;/<span class="title">title</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">link</span> <span class="attribute">rel</span>=<span class="value">"stylesheet"</span> <span class="attribute">href</span>=<span class="value">"bootstrap.min.css"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">body</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;<span class="title">form</span> <span class="attribute">class</span>=<span class="value">"form-horizontal"</span> <span class="attribute">role</span>=<span class="value">"form"</span>&gt;</span></span><br><span class="line">      		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">          	<span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-md-2 control-label"</span> &gt;</span>User Name<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">         		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-md-4"</span>&gt;</span></span><br><span class="line">            		<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"text"</span> <span class="attribute">class</span>=<span class="value">"form-control"</span> <span class="attribute">placeholder</span>=<span class="value">"username"</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">         		<span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-md-2 control-label"</span>&gt;</span>Email<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-md-4"</span>&gt;</span></span><br><span class="line">            		<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"email"</span> <span class="attribute">class</span>=<span class="value">"form-control"</span> <span class="attribute">placeholder</span>=<span class="value">"Email Address"</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">         		<span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"col-md-2 control-label"</span>&gt;</span>Password<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">        		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-md-4"</span>&gt;</span></span><br><span class="line">            		<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"password"</span> <span class="attribute">class</span>=<span class="value">"form-control"</span> <span class="attribute">placeholder</span>=<span class="value">"password"</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">         		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-md-offset-2 col-md-2"</span>&gt;</span></span><br><span class="line">            		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"checkbox"</span>&gt;</span></span><br><span class="line">           			<span class="tag">&lt;<span class="title">label</span>&gt;</span></span><br><span class="line">              		<span class="tag">&lt;<span class="title">input</span> <span class="attribute">type</span>=<span class="value">"checkbox"</span>&gt;</span>是否记住密码</span><br><span class="line">               		<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">               	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"form-group"</span>&gt;</span></span><br><span class="line">         		<span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-md-offset-2 col-md-2"</span>&gt;</span></span><br><span class="line">            		<span class="tag">&lt;<span class="title">label</span> <span class="attribute">class</span>=<span class="value">"control-label"</span>&gt;</span></span><br><span class="line">                		<span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-default"</span>&gt;</span>登陆<span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line">               	<span class="tag">&lt;/<span class="title">label</span>&gt;</span></span><br><span class="line">           	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">       	<span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">   	<span class="tag">&lt;/<span class="title">form</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>##BootStrap巨幕<br>巨幕在Bootstrap设计的网站中是非常常见的。它是一个轻量、灵活的组件，它能延伸至整个浏览器视口来展示网站上的关键内容，带给人很强烈的视觉第一印象。相关的巨幕可以借鉴Airbnb,Bootstrap官网等网站的巨幕设计。</p>
+<p>示例：<br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150725-1.jpg" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"jumbotron"</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="title">h1</span>&gt;</span>Welcome<span class="tag">&lt;/<span class="title">h1</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="title">p</span>&gt;</span>San Francisco, City by the Bay<span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">           <span class="tag">&lt;<span class="title">p</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">class</span>=<span class="value">"btn btn-success"</span> <span class="attribute">href</span>=<span class="value">"#"</span> <span class="attribute">role</span>=<span class="value">"button"</span>&gt;</span>Learn More<span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">p</span>&gt;</span></span><br><span class="line">       <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line">   <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>##BootStrap徽章<br>徽章给链接、导航等元素嵌套 <span class="badge"> 元素，可以很醒目的展示新的或未读的信息条目，就像Facebook，微信等应用中的那些未读消息提醒。</span></p>
+<p>三种示例：<br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20150725-2.jpg" alt=""></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Messages <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"badge"</span>&gt;</span>8<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"container"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">button</span> <span class="attribute">class</span>=<span class="value">"btn btn-success"</span> <span class="attribute">type</span>=<span class="value">"button"</span>&gt;</span>Messages <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"badge"</span>&gt;</span>99<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">br</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">ul</span> <span class="attribute">class</span>=<span class="value">"nav nav-pills"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">role</span>=<span class="value">"presentation"</span> <span class="attribute">class</span>=<span class="value">"active"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Home <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"badge"</span>&gt;</span>10<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">role</span>=<span class="value">"presentation"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Profile <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"badge"</span>&gt;</span>99<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">li</span> <span class="attribute">role</span>=<span class="value">"presentation"</span>&gt;</span><span class="tag">&lt;<span class="title">a</span> <span class="attribute">href</span>=<span class="value">"#"</span>&gt;</span>Contact <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"badge"</span>&gt;</span>25<span class="tag">&lt;/<span class="title">span</span>&gt;</span><span class="tag">&lt;/<span class="title">a</span>&gt;</span><span class="tag">&lt;/<span class="title">li</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">ul</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+            <div class="clearfix"></div>
+            <hr class="nogutter">
+        </div>
+        <nav class="pagination" role="pagination">
+    
+    <a class="pull-left" href="/2015/07/22/Github-new-user/" style="float: left;">
+        ← Github菜鸟指南
+    </a>
+    
+    
+    <a class="pull-right" href="/2015/07/07/JavaScript1/">
+        JavaScript基础(Part 1) →
+    </a>
+    
+</nav>
+
+        <div class="duoshuo">
+<div class="ds-thread" data-thread-key="2015/07/11/Bootstrap-basic/" data-title="Jason聊Bootstrap：第一话" data-url="http://yoursite.com/2015/07/11/Bootstrap-basic/"></div>
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"duoshuo_name"};
+(function() {
+	var ds = document.createElement('script');
+	ds.type = 'text/javascript';ds.async = true;
+	ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	ds.charset = 'UTF-8';
+	(document.getElementsByTagName('head')[0] 
+	 || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+</div>
+    </div>
+</section>
+
+
+      
+<!-- ============================ Footer =========================== -->
+
+<footer>
+    <div class="container">
+            <div class="copy">
+                <p>
+                    &copy; 2014<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>, Content By Jason Zhuo Jia. All Rights Reserved.
+                </p>
+                <p>Theme By <a href="//go.kieran.top" style="color: #767D84">Kieran</a></p>
+            </div>
+            <div class="social">
+                <ul>
+                    
+                    <li><a href="https://github.com/" title="Github" target="_blank"><i class="icon-github"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://twitter.com/" title="Twitter" target="_blank"><i class="icon-twitter"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://www.facebook.com/" title="Facebook" target="_blank"><i class="icon-facebook"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="https://google.com/" title="Google-Plus" target="_blank"><i class="icon-google-plus"></i></a>&nbsp;</li>
+                    
+                    
+                    <li><a href="http://weibo.com/" title="Sina-Weibo" target="_blank"><i class="icon-sina-weibo"></i></a>&nbsp;</li>
+                    
+                </ul>
+            </div>
+            <div class="clearfix"> </div>
+        </div>
+</footer>
+
+<!-- ============================ END Footer =========================== -->
+      <!-- Load our scripts -->
+        
+<!-- Resizable 'on-demand' full-height hero -->
+<script type="text/javascript">
+    
+    var resizeHero = function () {
+        var hero = $(".cover,.heightblock"),
+            window1 = $(window);
+        hero.css({
+            "height": window1.height()
+        });
+    };
+    
+    resizeHero();
+    
+    $(window).resize(function () {
+        resizeHero();
+    });
+</script>
+<script src="/js/plugins.min.js"></script><!-- Bootstrap core and concatenated plugins always load here -->
+<script src="/js/jquery.flexslider-min.js"></script><!-- Flexslider plugin -->
+<script src="/js/scripts.js"></script><!-- Theme scripts -->
+
+<!-- Initiate flexslider plugin -->
+<script type="text/javascript">
+    $(document).ready(function($) {
+      $('.flexslider').flexslider({
+        animation: "fade",
+        prevText: "",
+        nextText: "",
+        directionNav: true
+      });
+    });
+</script>
+
+</body>
+</html>
