@@ -1,0 +1,203 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Vector1 | Happy Isotope</title>
+  <meta name="author" content="Jason Zhuo Jia">
+  
+  <meta name="description" content="vector类是随标准 C++引入的标准库STL的一个类，它为C++内置数组提供了一种替代方式，为了使用vector 我们必须包含相关的头文件  ：
+1#include &amp;lt;vector&amp;gt;
+使用vector有两种不同的形式，即所谓的数组习惯和STL习惯。">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Vector1"/>
+  <meta property="og:site_name" content="Happy Isotope"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="Happy Isotope" type="application/atom+xml">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+
+<body>
+  <header id="header" class="inner"><div class="alignleft">
+  <h1><a href="/">Happy Isotope</a></h1>
+  <h2><a href="/"></a></h2>
+</div>
+<nav id="main-nav" class="alignright">
+  <ul>
+    
+      <li><a href="/">Home</a></li>
+    
+      <li><a href="/archives">Archives</a></li>
+    
+  </ul>
+  <div class="clearfix"></div>
+</nav>
+<div class="clearfix"></div></header>
+  <div id="content" class="inner">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
+  
+  <div class="post-content">
+    <header>
+      
+        <div class="icon"></div>
+        <time datetime="2015-09-22T20:23:54.000Z"><a href="/2015/09/22/Vector1/">2015-09-22</a></time>
+      
+      
+  
+    <h1 class="title">Vector1</h1>
+  
+
+    </header>
+    <div class="entry">
+      
+        <p>vector类是随标准 C++引入的标准库STL的一个类，它为C++内置数组提供了一种替代方式，为了使用vector 我们必须包含相关的头文件  ：</p>
+<figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;vector&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>使用vector有两种不同的形式，即所谓的数组习惯和STL习惯。<br><a id="more"></a></p>
+<p>一、数组习惯用法<br></p>
+<ol>
+<li>定义一个已知长度的 vector ：</li>
+</ol>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v(<span class="number">10</span>);  <span class="comment">//类似数组定义int a[10];</span></span><br></pre></td></tr></table></figure>
+<p>访问时，直接使用[]索引号或者iterator来访问; 使用 <code>if(v.empty())</code> 判断是否是空; <code>v.size()</code>判断元素个数。</p>
+<p>vector的元素被初始化为与其类型相关的缺省值：算术和指针类型的缺省值是 0，对于class 类型，缺省值可通过调用这类的缺省构造函数获得，我们还可以为每个元素提供一个显式的初始值来完成初始化，例如</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v(<span class="number">10</span>, <span class="number">1</span>); </span><br><span class="line"><span class="comment">//定义了向量v,它包含十个int型的元素 每个元素都被初始化为1 </span></span><br><span class="line">```  </span><br><span class="line">对于内置数组，我们可以直接使用常量来初始化，比如：</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span> ia[ <span class="number">6</span> ] = &#123; <span class="number">0</span>, -<span class="number">1</span>, <span class="number">0</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">1024</span> &#125;;</span><br><span class="line"></span><br><span class="line">但是<span class="built_in">vector</span>中不允许这么做，但是可以将<span class="built_in">vector</span>初始化为一个已有数组的全部或一部分，只需指定希望被用来初始化 <span class="built_in">vector</span> 的数组的开始地址以及数组最末元的下一位置来实现，例如： </span><br><span class="line"></span><br><span class="line">``` </span><br><span class="line"><span class="comment">// 把 b 的前6个元素拷贝到v中 </span></span><br><span class="line"><span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v(b, b+<span class="number">6</span>);</span><br></pre></td></tr></table></figure>
+<p>或者，vector可以被另一个vector初始化，或被赋给另一个vector。例如 </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v; </span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">init_and_assign</span><span class="params">()</span> </span>&#123; </span><br><span class="line">    <span class="comment">// 用另一个 vector 初始化一个 vector,x is another vector</span></span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt; v(x); </span><br><span class="line">    <span class="comment">// ... </span></span><br><span class="line"> </span><br><span class="line">    <span class="comment">// 把一个 vector 拷贝给另一个 vector</span></span><br><span class="line">    v = x; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>二、STL习惯用法</p>
+<p>在STL9中对vector的习惯用法完全不同。我们不是定义一个已知大小的vector，因为vector的优势之一就是大小可以变化，所以没有必要一来就将其Size定死。比如定义一个空vector： </p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">vector</span>&lt; <span class="built_in">string</span> &gt; sheet;</span><br></pre></td></tr></table></figure>
+<p>然后，我们需要做的不是赋值，而是插入元素。例如push_back()操作，就是在vector的后面插入一个元素. 下面的while循环从标准输入std::cin读入一个字符串序列,并每次将一个字符串插入到 vector 中</p>
+<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">string</span> <span class="built_in">word</span>; </span><br><span class="line"><span class="keyword">while</span> ( cin &gt;&gt; <span class="built_in">word</span> ) &#123; </span><br><span class="line"><span class="keyword">text</span>.push_back( <span class="built_in">word</span> ); <span class="comment"></span><br><span class="line">// ... </span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>虽然我们仍可以用下标操作符来迭代访问元素, 但是更典型的做法是使用vector操作集中的begin()和 end()所返回的迭代器iterator，在之前访问那一小句话中提到过，比如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cout</span> &lt;&lt; <span class="string">"words read are: \n"</span>; </span><br><span class="line"><span class="keyword">for</span>(<span class="built_in">vector</span>&lt;<span class="built_in">string</span>&gt;::iterator it = text.begin(); it != text.end(); ++it )&#123; </span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; *it &lt;&lt; <span class="string">' '</span>; </span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">cout</span> &lt;&lt; endl;</span><br><span class="line">``` </span><br><span class="line">   </span><br><span class="line">iterator 是标准库中的类，它具有指针的功能. </span><br><span class="line"></span><br><span class="line">注意, 不要混用这两种习惯用法. 一个反例如下, 先定义了一个空Vector，再赋值：</span><br><span class="line"></span><br><span class="line">&#123;% codeblock lang:C++ %&#125;</span><br><span class="line">    <span class="built_in">vector</span>&lt;<span class="keyword">int</span>&gt; v; </span><br><span class="line">    v[<span class="number">0</span>] = <span class="number">6666</span>;</span><br><span class="line">&#123;% endcodeblock %&#125;  </span><br><span class="line"></span><br><span class="line">这就是错误的， 因为v还没有第一个元素，我们只能索引<span class="built_in">vector</span>中已经存在的元素size()操作返回 <span class="built_in">vector</span>包含的元素的个数。</span><br><span class="line"></span><br><span class="line">三、 其他常用方法：</span><br><span class="line">		</span><br><span class="line">```		</span><br><span class="line"><span class="built_in">vector</span>::size</span><br><span class="line"><span class="built_in">vector</span>::clear</span><br><span class="line"><span class="built_in">vector</span>::push_back</span><br><span class="line"><span class="built_in">vector</span>::pop_back</span><br><span class="line"><span class="built_in">vector</span>::swap</span><br><span class="line"><span class="built_in">vector</span>::erase</span><br><span class="line"><span class="built_in">vector</span>::insert</span><br><span class="line"><span class="built_in">vector</span>::swap </span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">/*Exchanges the content of the container by the content of x, </span><br><span class="line">which is another vector object of the same type. Sizes may differ.*/</span></span><br><span class="line"><span class="built_in">vector</span>::shrink_to_fit (C++<span class="number">11</span>)</span><br></pre></td></tr></table></figure>
+<p>For more method, please visit:<br><a><a href="http://www.cplusplus.com/reference/vector/vector/" target="_blank" rel="external">http://www.cplusplus.com/reference/vector/vector/</a> </a></p>
+
+      
+    </div>
+    <footer>
+      
+        
+        
+  
+  <div class="tags">
+    <a href="/tags/C-C/">C/C++</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
+      
+      <div class="clearfix"></div>
+    </footer>
+  </div>
+</article>
+
+
+<section id="comment">
+  <h1 class="title">Комментарии</h1>
+
+  
+      <div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=123456789012345";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<div class="fb-comments" data-href="http://yoursite.com/2015/09/22/Vector1/index.html" data-num-posts="5" data-width="840" data-colorscheme="light"></div>
+      
+  
+</section>
+
+</div></div>
+    <aside id="sidebar" class="alignright">
+  <div class="search">
+  <form action="//google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Поиск">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</div>
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Метки</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/C-C/">C/C++</a><small>1</small></li>
+  
+    <li><a href="/tags/Front-End/">Front End</a><small>2</small></li>
+  
+    <li><a href="/tags/Java/">Java</a><small>2</small></li>
+  
+    <li><a href="/tags/Java-Workflow/">Java Workflow</a><small>3</small></li>
+  
+    <li><a href="/tags/Life/">Life</a><small>1</small></li>
+  
+    <li><a href="/tags/Practice/">Practice</a><small>6</small></li>
+  
+    <li><a href="/tags/Travel/">Travel</a><small>1</small></li>
+  
+    <li><a href="/tags/Tutorial/">Tutorial</a><small>2</small></li>
+  
+  </ul>
+</div>
+
+</aside>
+    <div class="clearfix"></div>
+  </div>
+  <footer id="footer" class="inner"><div class="alignleft">
+  
+  &copy; 2015 Jason Zhuo Jia
+  
+</div>
+<div class="clearfix"></div></footer>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+</body>
+</html>
