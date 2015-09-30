@@ -2,13 +2,28 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2015/09/22/Vector1/</loc>
-    <lastmod>2015-09-22T20:42:45.000Z</lastmod>
+    <loc>http://yoursite.com/2015/09/29/HTTP/</loc>
+    <lastmod>2015-09-30T03:24:24.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/06/16/Outer-Banks/</loc>
+    <lastmod>2015-09-30T03:00:38.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/09/22/jbpm-example/</loc>
+    <lastmod>2015-09-22T21:33:57.000Z</lastmod>
   </url>
   
   <url>
     <loc>http://yoursite.com/2015/09/22/Palindrome-LinkedList-and-SortList/</loc>
-    <lastmod>2015-09-22T20:40:10.000Z</lastmod>
+    <lastmod>2015-09-22T21:09:50.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/09/22/Vector1/</loc>
+    <lastmod>2015-09-22T20:42:45.000Z</lastmod>
   </url>
   
   <url>
@@ -54,11 +69,6 @@
   <url>
     <loc>http://yoursite.com/2015/06/16/Duke/</loc>
     <lastmod>2015-06-25T15:37:56.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/06/16/Outer-Banks/</loc>
-    <lastmod>2015-06-25T06:24:21.000Z</lastmod>
   </url>
   
   <url>
