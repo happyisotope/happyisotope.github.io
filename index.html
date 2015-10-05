@@ -103,7 +103,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/Front-End/" style="font-size: 13.33px;">Front End</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Java-Workflow/" style="font-size: 16.67px;">Java Workflow</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Practice/" style="font-size: 20px;">Practice</a> <a href="/tags/Travel/" style="font-size: 10px;">Travel</a> <a href="/tags/Tutorial/" style="font-size: 13.33px;">Tutorial</a> <a href="/tags/Workflow/" style="font-size: 10px;">Workflow</a>
+						<a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/Distributed-System/" style="font-size: 10px;">Distributed System</a> <a href="/tags/Front-End/" style="font-size: 13.33px;">Front End</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Java-Workflow/" style="font-size: 16.67px;">Java Workflow</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Network/" style="font-size: 13.33px;">Network</a> <a href="/tags/Practice/" style="font-size: 20px;">Practice</a> <a href="/tags/Travel/" style="font-size: 10px;">Travel</a> <a href="/tags/Tutorial/" style="font-size: 16.67px;">Tutorial</a> <a href="/tags/Workflow/" style="font-size: 10px;">Workflow</a>
 					</div>
 				</section>
 				
@@ -163,6 +163,67 @@
 </nav>
       <div class="body-wrap">
   
+    <article id="post-raft" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/10/05/raft/" class="article-date">
+  	<time datetime="2015-10-05T22:55:43.000Z" itemprop="datePublished">2015-10-05</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/10/05/raft/">Implement of Raft</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Hi, I am preparing tech interviews these days, and I am reviewing Raft project I did last semester. I gave a short presentation to others, which is a good way to check if I have a good understanding of the algorithm. And after that, I just want to write a summary by writing this blog.</p>
+<p>Before we talk about Raft, we need to talk a little history about Paxos(1980s), a distributed consensus algorithm. The author of Paxos didn’t take the average IQ of people into account, when he declares that Paxos makes things simple! Oppps. The complexity of Paxos has strongly restricted the development, until Raft showed up.</p>
+<p>Raft was proposed by Diego and John (Stanford), and this algorithm really makes everything understandable. I will say, it is vivid.</p>
+<p><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-5.jpg" alt="Raft"></p>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Distributed-System/">Distributed System</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li></ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a  href="/2015/10/05/raft/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
     <article id="post-HTTP" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -180,7 +241,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/09/29/HTTP/">Difference between HTTPS and HTTP</a>
+      <a class="article-title" href="/2015/09/29/HTTP/">Differences between HTTPS and HTTP</a>
     </h1>
   
 
@@ -678,7 +739,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####Question List: </p>
+        <h2>Question List: </h2>
+
 <ul>
 <li>Q1: Compare Version Number</li>
 <li>Q2: Valid Palindrome</li>
@@ -715,68 +777,9 @@
 
 
   
-    <article id="post-Java-exception" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/06/26/Java-exception/" class="article-date">
-  	<time datetime="2015-06-27T03:02:17.000Z" itemprop="datePublished">2015-06-26</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/06/26/Java-exception/">Java exception</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>异常(Exception)，Ex前缀在中文大义就是排他、否定、外部，从字面上理解Exception就是和常态不一样的情况，也就是通常我们不希望出现的情况。人生之不如意，十之八九，比如吃烧饼烫后脑勺，交卷子的前一秒发现试卷有反面。</p>
-<p>下面来谈谈Java中的程序异常和异常处理。程序也是生活的体现，99%的程序员都无法保证大型程序完全没有异常。所以，异常处理非常重要。对于异常的处理，可以将异常提示给程序员或者用户，让异常的程序以适当的方式继续进行或者终止，并让资源回滚。根据《Think in Java》Bruce写道的那样：<strong><em> “Java中的异常处理的目的在于通过少于目前数量的代码来简化大型、可靠的程序生成，并通过这种方式使你更自信：你的应用中没有你没有处理的错误。” </em></strong><br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/06/26/Java-exception/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-  
   
     <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
+      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
     </nav>
   
 </div>

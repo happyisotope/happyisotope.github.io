@@ -2,8 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2015/06/27/Leetcode_String_1/</loc>
+    <lastmod>2015-10-05T23:07:34.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/06/06/New-Questions-on-Leetcode/</loc>
+    <lastmod>2015-10-05T23:06:12.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/09/22/Vector1/</loc>
+    <lastmod>2015-10-05T23:05:07.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/10/05/raft/</loc>
+    <lastmod>2015-10-05T23:03:56.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2015/09/29/HTTP/</loc>
-    <lastmod>2015-09-30T03:24:24.000Z</lastmod>
+    <lastmod>2015-10-05T23:00:17.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/06/06/Hexo-Basic-Commands/</loc>
+    <lastmod>2015-10-05T22:58:29.000Z</lastmod>
   </url>
   
   <url>
@@ -19,11 +44,6 @@
   <url>
     <loc>http://yoursite.com/2015/09/22/Palindrome-LinkedList-and-SortList/</loc>
     <lastmod>2015-09-22T21:09:50.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/09/22/Vector1/</loc>
-    <lastmod>2015-09-22T20:42:45.000Z</lastmod>
   </url>
   
   <url>
@@ -49,11 +69,6 @@
   <url>
     <loc>http://yoursite.com/2015/07/22/Github-new-user/</loc>
     <lastmod>2015-07-23T00:14:05.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/06/27/Leetcode_String_1/</loc>
-    <lastmod>2015-07-08T12:25:14.000Z</lastmod>
   </url>
   
   <url>
@@ -89,16 +104,6 @@
   <url>
     <loc>http://yoursite.com/2015/06/10/Evaluate-Reverse-Polish-Notation/</loc>
     <lastmod>2015-06-10T06:09:56.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/06/06/New-Questions-on-Leetcode/</loc>
-    <lastmod>2015-06-08T03:57:50.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2015/06/06/Hexo-Basic-Commands/</loc>
-    <lastmod>2015-06-06T08:20:20.000Z</lastmod>
   </url>
   
 </urlset>
