@@ -3,18 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Hexo Basic Commands | Happy Isotope</title>
+  <title>Implement of Raft | Happy Isotope</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is my first post. For this post, I will give an important suggestion when you use Hexo to build a blog, and some basic commands to use frequently.">
+  <meta name="description" content="Hi, I am preparing tech interviews these days, and I am reviewing Raft project I did last semester. I gave a short presentation to others, which is a good way to check if I have a good understanding o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo Basic Commands">
-<meta property="og:url" content="http://yoursite.com/2015/06/06/Hexo-Basic-Commands/index.html">
+<meta property="og:title" content="Implement of Raft">
+<meta property="og:url" content="http://yoursite.com/2015/10/05/raft/index.html">
 <meta property="og:site_name" content="Happy Isotope">
-<meta property="og:description" content="This is my first post. For this post, I will give an important suggestion when you use Hexo to build a blog, and some basic commands to use frequently.">
-<meta property="og:updated_time" content="2015-10-05T22:58:29.000Z">
+<meta property="og:description" content="Hi, I am preparing tech interviews these days, and I am reviewing Raft project I did last semester. I gave a short presentation to others, which is a good way to check if I have a good understanding o">
+<meta property="og:image" content="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-5.jpg">
+<meta property="og:image" content="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-3.jpg">
+<meta property="og:image" content="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-2.jpg">
+<meta property="og:updated_time" content="2015-10-05T23:03:56.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo Basic Commands">
-<meta name="twitter:description" content="This is my first post. For this post, I will give an important suggestion when you use Hexo to build a blog, and some basic commands to use frequently.">
+<meta name="twitter:title" content="Implement of Raft">
+<meta name="twitter:description" content="Hi, I am preparing tech interviews these days, and I am reviewing Raft project I did last semester. I gave a short presentation to others, which is a good way to check if I have a good understanding o">
   
     <link rel="alternative" href="/atom.xml" title="Happy Isotope" type="application/atom+xml">
   
@@ -162,11 +165,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Hexo-Basic-Commands" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-raft" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/06/06/Hexo-Basic-Commands/" class="article-date">
-  	<time datetime="2015-06-06T20:17:09.000Z" itemprop="datePublished">2015-06-06</time>
+      <a href="/2015/10/05/raft/" class="article-date">
+  	<time datetime="2015-10-05T22:55:43.000Z" itemprop="datePublished">2015-10-05</time>
 </a>
     </div>
   
@@ -179,7 +182,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hexo Basic Commands
+      Implement of Raft
     </h1>
   
 
@@ -188,7 +191,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tutorial/">Tutorial</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Distributed-System/">Distributed System</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Network/">Network</a></li></ul>
 	</div>
 
         
@@ -199,19 +202,27 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This is my first post. For this post, I will give an important suggestion when you use Hexo to build a blog, and some basic commands to use frequently.<br><a id="more"></a></p>
-<h2 id="First_Time_to_Deploy">First Time to Deploy</h2><p>There might be a little bit trouble, if this is your first time to deploy your blog. The document is not crystal clear at this point. If you want to deploy your blog/Website on Github, Gitcafe or coding.net, please install an appropriate deployer first. Run:</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm <span class="operator"><span class="keyword">install</span> hexo-deployer-git <span class="comment">--save</span></span></span><br></pre></td></tr></table></figure>
-<p>Then change the _config.yml at your hexo root folder:</p>
-<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: XXX(your git repository)</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-<h2 id="Basic_Commands">Basic Commands</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>For more info, please visit: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+        <p>Hi, I am preparing tech interviews these days, and I am reviewing Raft project I did last semester. I gave a short presentation to others, which is a good way to check if I have a good understanding of the algorithm. And after that, I just want to write a summary by writing this blog.</p>
+<p>Before we talk about Raft, we need to talk a little history about Paxos(1980s), a distributed consensus algorithm. The author of Paxos didn’t take the average IQ of people into account, when he declares that Paxos makes things simple! Oppps. The complexity of Paxos has strongly restricted the development, until Raft showed up.</p>
+<p>Raft was proposed by Diego and John (Stanford), and this algorithm really makes everything understandable. I will say, it is vivid.</p>
+<p><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-5.jpg" alt="Raft"></p>
+<a id="more"></a>
+<p>There are 2 kinds of servers in this situations: Naming Server and Storage Server. Naming Server is responsible for sending information between servers, but not process information(Storage Servers do). If there is only one naming server and it dies, every one dies. This is called “Single Point Failure”. So the naming servers are usually redundant. For there servers, there are consensus issues.</p>
+<p>For simplicity, we define three role/status of server: Leader, Follower, Candidate. There is only one valid leader at a time. And the whole process contains two parts: Leader Election and Log Replication.</p>
+<h2>Leader Election</h2><br>Leader will periodically send heartbeat to all followers. If the followers can hear the heartbeat from the leader, then they just stick to the status quo, being followers. Once they can’t receive the heartbeat. Then leader election begins. The amount of time a follower waits until becoming a candidate is the election timeout. The period of sending heartbeat is called heartbeat timeout. In our project, election timeout is set to at least 5 to 10 times heartbeat interval to account for variance in leader replication.<br><br>We can describe the process in the following way:<br><br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-3.jpg" alt="Leader Election1"><br><br>First, the ambitious follower turns into a candidate, adds its term by 1, and sends vote request. Here we have 3 situations:<br><br>A. More than 1/2 servers give the vote, and this candidate wins the leader election.<br><br>B. Another server wins the election and becomes the new leader, this candidate will become a follower.<br><br>C. No one wins, so they will wait (sleep for a while) to increase their term and re-elect again.<br><br>During the leader election, the candidate may receive vote request from other servers. If the other server has a higher term, then this candidate will give its vote and becomes a follower, otherwise it refuses the request. (one case in situtation B/A)<br><br><img src="http://7xjjbh.com1.z0.glb.clouddn.com/QQ20151005-2.jpg" alt="Leader Election1"><br><br>If two candidates has the same votes(which means either of them has a majority votes), they will wait to increase their term and re-elect again. (Situation C)<br><br>We can use randomize the waiting/Sleeping time to reduce the possibility of the occurrence of Situation C.<br><br>We should take care the term. Term changes doesn’t mean that leader changes; but leader changes must cause term increases. For me, I think term is much like a Dynasty (in Chinese we say “Nian Hao”) for a particular king.<br><br>Reviewing Question:<br><br>How does follower determine the candidate is worthy to vote? Compare the Term, bigger term wins. What if the follower and the candidate has the same term? Then compare the index, the bigger index wins.<br><br>Also, we need a FLAG to remember the server has voted for the election or not. In order to have only one leader, everyone has only one chance to vote in every term.<br><br><br><h2>Log Replication</h2>
+
+<p>What is in a Log entry? Things might be different in various industrious situations. In general, one log entry at least has index, term, and certain instructions.</p>
+<p>Leader is responsible for receiving request from the clients. When the leader receives the requests, it will write the log, and sends its log to other servers. When the log is regarded as safely committed, the leader replies the client: blablabla, we did what you need us to do or store. </p>
+<p>How to make the log safely committed? We have 2-phase commit.</p>
+<ul>
+<li>First, the leader should send appending request to others, and collects the votes.</li>
+<li>Once the leader collects joint consensus(votes &gt; 1/2), the leader will transfer to new configuration, commit log, and declare to clients and other servers. Other server will append the commit log.</li>
+</ul>
+<p>The record of the committing is persistent and consistent. There might be some conflicts between logs(Leader dies and recovers as follower later), so the leader will force the follower to clone the committed log to solve this problem. Therefore, a qualified leader should have all committed logs. </p>
+<p>When a new leader is elected, the leader will check the logs in a descending index order, in case of disturbance and loss of necessary logs.</p>
+<p></p><h2>Other implement details</h2><br>In our project, we use Java to implement the algorithm, use a thread to represent every independent server, and use RPC to send communication information(request, vote, logs) between threads.<p></p>
+<p>During the learning process, the animation below is very helpful for me to understand the whole process.</p>
+<p><a><a href="http://thesecretlivesofdata.com/raft/" target="_blank" rel="external">http://thesecretlivesofdata.com/raft/</a></a></p>
 
       
     </div>
@@ -221,18 +232,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/06/06/New-Questions-on-Leetcode/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          New Questions on Leetcode
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/06/04/jbpm4-4-Installation-in-Eclipse/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Eclipse下jBPM4.4开发环境搭建</div>
+    <a href="/2015/09/29/HTTP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Differences between HTTPS and HTTP</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -261,7 +263,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Hexo-Basic-Commands" data-title="Hexo Basic Commands" data-url="http://yoursite.com/2015/06/06/Hexo-Basic-Commands/"></div>
+	<div class="ds-thread" data-thread-key="raft" data-title="Implement of Raft" data-url="http://yoursite.com/2015/10/05/raft/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">

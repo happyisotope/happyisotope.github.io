@@ -5,7 +5,8 @@
   
   <title>Leetcode String (Part 1) | Happy Isotope</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="####Question List: 
+  <meta name="description" content="Question List: 
+
 
 Q1: Compare Version Number
 Q2: Valid Palindrome
@@ -15,16 +16,18 @@ Q4: Valid Number">
 <meta property="og:title" content="Leetcode String (Part 1)">
 <meta property="og:url" content="http://yoursite.com/2015/06/27/Leetcode_String_1/index.html">
 <meta property="og:site_name" content="Happy Isotope">
-<meta property="og:description" content="####Question List: 
+<meta property="og:description" content="Question List: 
+
 
 Q1: Compare Version Number
 Q2: Valid Palindrome
 Q3: Valid Parentheses 
 Q4: Valid Number">
-<meta property="og:updated_time" content="2015-07-08T12:25:14.000Z">
+<meta property="og:updated_time" content="2015-10-05T23:07:34.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Leetcode String (Part 1)">
-<meta name="twitter:description" content="####Question List: 
+<meta name="twitter:description" content="Question List: 
+
 
 Q1: Compare Version Number
 Q2: Valid Palindrome
@@ -119,7 +122,7 @@ Q4: Valid Number">
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/Front-End/" style="font-size: 13.33px;">Front End</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Java-Workflow/" style="font-size: 16.67px;">Java Workflow</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Network/" style="font-size: 10px;">Network</a> <a href="/tags/Practice/" style="font-size: 20px;">Practice</a> <a href="/tags/Travel/" style="font-size: 10px;">Travel</a> <a href="/tags/Tutorial/" style="font-size: 13.33px;">Tutorial</a> <a href="/tags/Workflow/" style="font-size: 10px;">Workflow</a>
+						<a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/Distributed-System/" style="font-size: 10px;">Distributed System</a> <a href="/tags/Front-End/" style="font-size: 13.33px;">Front End</a> <a href="/tags/Java/" style="font-size: 16.67px;">Java</a> <a href="/tags/Java-Workflow/" style="font-size: 16.67px;">Java Workflow</a> <a href="/tags/Life/" style="font-size: 10px;">Life</a> <a href="/tags/Network/" style="font-size: 13.33px;">Network</a> <a href="/tags/Practice/" style="font-size: 20px;">Practice</a> <a href="/tags/Travel/" style="font-size: 10px;">Travel</a> <a href="/tags/Tutorial/" style="font-size: 16.67px;">Tutorial</a> <a href="/tags/Workflow/" style="font-size: 10px;">Workflow</a>
 					</div>
 				</section>
 				
@@ -214,7 +217,8 @@ Q4: Valid Number">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>####Question List: </p>
+        <h2>Question List: </h2>
+
 <ul>
 <li>Q1: Compare Version Number</li>
 <li>Q2: Valid Palindrome</li>
@@ -222,24 +226,27 @@ Q4: Valid Number">
 <li>Q4: Valid Number<a id="more"></a>
 </li>
 </ul>
-<p>###Question 1: Compare Version Number<br>Compare two version numbers version1 and version2.<br>If version1 &gt; version2 return 1, if version1 &lt; version2 return -1, otherwise return 0.</p>
+<p></p><h2>Question 1: Compare Version Number</h2><br>Compare two version numbers version1 and version2.<br>If version1 &gt; version2 return 1, if version1 &lt; version2 return -1, otherwise return 0.<p></p>
 <p>You may assume that the version strings are non-empty and contain only digits and the . character.<br>The . character does not represent a decimal point and is used to separate number sequences.<br>For instance, 2.5 is not “two and a half” or “half way to version three”, it is the fifth second-level revision of the second first-level revision.</p>
 <p>Here is an example of version numbers ordering: 0.1 &lt; 1.1 &lt; 1.2 &lt; 13.37</p>
-<p>####My Solution:</p>
+<h3>My Solution:</h3>
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> Solution &#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">compareVersion</span><span class="params">(<span class="built_in">string</span> version1, <span class="built_in">string</span> version2)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> pos1 = <span class="number">0</span>, pos2 = <span class="number">0</span>, token1, token2;</span><br><span class="line">        <span class="built_in">string</span> delimiter = <span class="string">"."</span>;</span><br><span class="line">        pos1 = version1.find(delimiter);</span><br><span class="line">        pos2 = version2.find(delimiter);</span><br><span class="line">        <span class="keyword">if</span>(pos1 &gt;=<span class="number">0</span> ) &#123; </span><br><span class="line">        	token1 = stoi(version1.substr(<span class="number">0</span>,pos1));</span><br><span class="line">        &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        	token1 = version1.empty()? <span class="number">0</span>:stoi(version1);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(pos2 &gt;=<span class="number">0</span> ) &#123;</span><br><span class="line">            token2 = stoi(version2.substr(<span class="number">0</span>,pos2));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            token2 = version2.empty()? <span class="number">0</span>:stoi(version2);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">int</span> diff = token1 - token2;</span><br><span class="line">        <span class="keyword">if</span>(diff == <span class="number">0</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(pos1&lt;<span class="number">0</span> &amp;&amp; pos2&lt;<span class="number">0</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">            version1 = pos1 &gt;= <span class="number">0</span> ? version1.erase(<span class="number">0</span>, pos1 + <span class="number">1</span>):<span class="string">"0"</span>;</span><br><span class="line">            version2 = pos2 &gt;= <span class="number">0</span> ? version2.erase(<span class="number">0</span>, pos2 + <span class="number">1</span>):<span class="string">"0"</span>;</span><br><span class="line">            <span class="keyword">return</span> compareVersion(version1, version2);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> <span class="keyword">return</span> diff &gt; <span class="number">0</span> ? <span class="number">1</span>:-<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<p>###Question 2: Valid Palindrome<br> Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.</p>
+<p></p><h2>Question 2: Valid Palindrome</h2><br> Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.<p></p>
 <p>For example,<br>“A man, a plan, a canal: Panama” is a palindrome.<br>“race a car” is not a palindrome.</p>
 <p>Note:<br>Have you consider that the string might be empty? This is a good question to ask during an interview.</p>
 <p>For the purpose of this problem, we define empty string as valid palindrome. </p>
-<p>####My Solution:</p>
+<h3>My Solution:</h3>
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isPalindrome</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> start=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> end=s.size()-<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(start&lt;end)&#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">isalnum</span>(s[start])==<span class="literal">false</span>) &#123;start++;<span class="keyword">continue</span>;&#125;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">isalnum</span>(s[end])==<span class="literal">false</span>)&#123;end--;<span class="keyword">continue</span>;&#125;</span><br><span class="line">            <span class="keyword">if</span>(<span class="built_in">tolower</span>(s[start])!=<span class="built_in">tolower</span>(s[end]))&#123;</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            start++;</span><br><span class="line">            end--;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###Question 3: Valid Parentheses<br>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.</p>
+<p></p><h2>Question 3: Valid Parentheses </h2><br>Given a string containing just the characters ‘(‘, ‘)’, ‘{‘, ‘}’, ‘[‘ and ‘]’, determine if the input string is valid.<p></p>
 <p>The brackets must close in the correct order, “()” and “()[]{}” are all valid but “(]” and “([)]” are not.</p>
-<p>####My Solution:</p>
+<h3>My Solution:</h3>
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">isValid</span><span class="params">(<span class="built_in">string</span> s)</span> </span>&#123;</span><br><span class="line">	<span class="built_in">stack</span>&lt;<span class="keyword">char</span>&gt; st;</span><br><span class="line">   	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.size();i++)&#123;</span><br><span class="line">   		<span class="keyword">if</span>( s[i]==<span class="string">'('</span> || s[i]==<span class="string">'&#123;'</span> || s[i]==<span class="string">'['</span>)&#123;</span><br><span class="line">   			st.push(s[i]);</span><br><span class="line">   		&#125;</span><br><span class="line">      	<span class="keyword">else</span>&#123;</span><br><span class="line">     		<span class="keyword">if</span>(st.empty()) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">        	<span class="keyword">if</span> ((s[i]==<span class="string">')'</span>) &amp;&amp; (st.top()!=<span class="string">'('</span>)) &#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">        	<span class="keyword">if</span> ((s[i]==<span class="string">'&#123;'</span>) &amp;&amp; (st.top()!=<span class="string">'&#125;'</span>)) &#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">      		<span class="keyword">if</span> ((s[i]==<span class="string">'['</span>) &amp;&amp; (st.top()!=<span class="string">']'</span>)) &#123;<span class="keyword">return</span> <span class="literal">false</span>;&#125;</span><br><span class="line">        	st.pop();</span><br><span class="line">     	&#125;</span><br><span class="line"> 	&#125;</span><br><span class="line">  	<span class="keyword">return</span> st.empty();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>###Question 4:Valid Number<br>Validate if a given string is numeric.</p>
+<p></p><h2>Question 4:Valid Number</h2><br>Validate if a given string is numeric.<p></p>
 <p>Some examples: “0” =&gt; true || “ 0.1 “ =&gt; true || “abc” =&gt; false || “1 a” =&gt; false ||  “2e10” =&gt; true</p>
-<p>####My solutions:<br>/*1. skip the leading whitespaces;</p>
+<p></p><h3>My solutions:</h3><br>/*1. skip the leading whitespaces;<p></p>
 <ol>
 <li>check if the significand is valid. To do so, simply skip the leading sign and count the number of digits and the number of points. A valid significand has no more than one point and at least one digit.</li>
 <li>check if the exponent part is valid. We do this if the significand is followed by ‘e’. Simply skip the leading sign and count the number of digits. A valid exponent contain at least one digit.</li>
